@@ -146,9 +146,10 @@ $sections = [ordered]@{
 
 # Total resource count for the hero chips
 $totalCount = ($sections.Values | ForEach-Object { $_.files.Count } | Measure-Object -Sum).Sum
+$totalChip = "<button class=`"chip filter-chip is-active`" type=`"button`" data-filter=`"all`" aria-pressed=`"true`">Total resources <strong>$totalCount</strong></button>"
 $sectionChips = ($sections.GetEnumerator() | ForEach-Object {
   $c = $_.Value.files.Count
-  "<span class=`"chip`">$($_.Value.title) <strong>$c</strong></span>"
+  "<button class=`"chip filter-chip`" type=`"button`" data-filter=`"$($_.Key)`" aria-pressed=`"false`">$($_.Value.title) <strong>$c</strong></button>"
 }) -join "`n        "
 
 # Navbar links
@@ -179,9 +180,16 @@ $html = @"
 
   <!-- Navbar -->
   <nav class="navbar" aria-label="Main navigation">
-    <span class="navbar-brand">
-      <span class="accent">&#9632;</span> AI Toolbox
-    </span>
+    <a class="navbar-brand" href="https://entelect-incubator.github.io/AI-Toolbox/" aria-label="AI Toolbox Home">
+      <img
+        class="navbar-logo"
+        src="https://culture.entelect.co.za/wp-content/uploads/2025/04/logo_icon_white.png"
+        alt="Entelect logo"
+        width="28"
+        height="28"
+      />
+      AI Toolbox
+    </a>
     <ul class="navbar-links">
           $navLinks
     </ul>
@@ -221,7 +229,7 @@ $html = @"
 
       <!-- Stats chips -->
       <div class="hero-stats">
-        <span class="chip">Total resources <strong>$totalCount</strong></span>
+        $totalChip
         $sectionChips
       </div>
     </div>

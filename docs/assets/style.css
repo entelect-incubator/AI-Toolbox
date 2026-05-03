@@ -84,8 +84,11 @@ a:hover {
 	gap: var(--space-sm);
 }
 
-.navbar-brand .accent {
-	color: var(--color-tertiary);
+.navbar-logo {
+	display: block;
+	width: 28px;
+	height: 28px;
+	object-fit: contain;
 }
 
 .navbar-links {
@@ -253,6 +256,31 @@ a:hover {
 	line-height: 16px;
 	border-radius: var(--rounded-full);
 	padding: 6px 12px;
+}
+
+.filter-chip {
+	border: 1px solid transparent;
+	cursor: pointer;
+	font-family: inherit;
+	transition:
+		border-color 0.15s,
+		background-color 0.15s,
+		transform 0.15s;
+}
+
+.filter-chip:hover {
+	border-color: var(--color-tertiary);
+	transform: translateY(-1px);
+}
+
+.filter-chip:focus-visible {
+	outline: 2px solid var(--color-tertiary);
+	outline-offset: 2px;
+}
+
+.filter-chip.is-active {
+	background: var(--color-secondary);
+	border-color: var(--color-tertiary);
 }
 
 /* ── Main content ────────────────────────────────────── */
