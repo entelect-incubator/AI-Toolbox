@@ -1,365 +1,465 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Entelect AI Toolbox â€” agents, guides, hooks, and prompts for AI-assisted delivery." />
-  <title>Entelect AI Toolbox</title>
-  <link rel="stylesheet" href="assets/style.css" />
-</head>
-<body>
-
-  <!-- Navbar -->
-  <nav class="navbar" aria-label="Main navigation">
-    <a class="navbar-brand" href="https://entelect-incubator.github.io/AI-Toolbox/" aria-label="AI Toolbox Home">
-      <img
-        class="navbar-logo"
-        src="https://culture.entelect.co.za/wp-content/uploads/2025/04/logo_icon_white.png"
-        alt="Entelect logo"
-        width="28"
-        height="28"
-      />
-      AI Toolbox
-    </a>
-    <ul class="navbar-links">
-          <li><a href="#guides">Guides</a></li>
-          <li><a href="#agents">Agents</a></li>
-          <li><a href="#roles">Role Playbooks</a></li>
-          <li><a href="#hooks">Hooks</a></li>
-          <li><a href="#plugins">Plugins and Prompts</a></li>
-          <li><a href="#examples">Examples</a></li>
-          <li><a href="#templates">Spec Templates</a></li>
-          <li><a href="#references">References</a></li>
-    </ul>
-    <a class="navbar-github" href="https://github.com/entelect-incubator/AI-Toolbox" target="_blank" rel="noopener">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Entelect AI Toolbox â€” agents, guides, hooks, and prompts for AI-assisted delivery." />
+		<title>Entelect AI Toolbox</title>
+		<link rel="stylesheet" href="assets/style.css" />
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav class="navbar" aria-label="Main navigation">
+			<a class="navbar-brand" href="https://entelect-incubator.github.io/AI-Toolbox/" aria-label="AI Toolbox Home">
+				<img class="navbar-logo" src="https://culture.entelect.co.za/wp-content/uploads/2025/04/logo_icon_white.png" alt="Entelect logo" width="28" height="28" />
+				AI Toolbox
+			</a>
+			<ul class="navbar-links">
+				<li><a href="#guides">Guides</a></li>
+				<li><a href="#agents">Agents</a></li>
+				<li><a href="#roles">Role Playbooks</a></li>
+				<li><a href="#hooks">Hooks</a></li>
+				<li><a href="#plugins">Plugins and Prompts</a></li>
+				<li><a href="#examples">Examples</a></li>
+				<li><a href="#templates">Spec Templates</a></li>
+				<li><a href="#references">References</a></li>
+			</ul>
+			<a class="navbar-github" href="https://github.com/entelect-incubator/AI-Toolbox" target="_blank" rel="noopener">
+				<svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+					<path
+						d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
                  0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13
                  -.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66
                  .07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15
                  -.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27
                  .68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12
                  .51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
-                 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-      </svg>
-      View on GitHub
-    </a>
-  </nav>
+                 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+					/>
+				</svg>
+				View on GitHub
+			</a>
+		</nav>
 
-  <!-- Hero -->
-  <header class="hero">
-    <div class="hero-inner">
-      <span class="hero-eyebrow">Entelect Delivery</span>
-      <h1>AI Toolbox</h1>
-      <p class="hero-sub">
-        Agents, guides, hooks, and prompts for AI-assisted BA, Dev, and QA delivery.
-        Community-maintained. Spec-driven.
-      </p>
+		<!-- Hero -->
+		<header class="hero">
+			<div class="hero-inner">
+				<span class="hero-eyebrow">Entelect Delivery</span>
+				<h1>AI Toolbox</h1>
+				<p class="hero-sub">Agents, guides, hooks, and prompts for AI-assisted BA, Dev, and QA delivery. Community-maintained. Spec-driven.</p>
 
-      <!-- Search -->
-      <div class="search-wrap">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-        </svg>
-        <input id="search" type="search" placeholder="Search all resourcesâ€¦ (Ctrl+K)" autocomplete="off" />
-      </div>
+				<!-- Search -->
+				<div class="search-wrap">
+					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+						<circle cx="11" cy="11" r="8" />
+						<line x1="21" y1="21" x2="16.65" y2="16.65" />
+					</svg>
+					<input id="search" type="search" placeholder="Search all resources (Ctrl+K)" autocomplete="off" />
+				</div>
 
-      <!-- Stats chips -->
-      <div class="hero-stats">
-        <button class="chip filter-chip is-active" type="button" data-filter="all" aria-pressed="true">Total resources <strong>39</strong></button>
-        <button class="chip filter-chip" type="button" data-filter="guides" aria-pressed="false">Guides <strong>15</strong></button>
-        <button class="chip filter-chip" type="button" data-filter="agents" aria-pressed="false">Agents <strong>6</strong></button>
-        <button class="chip filter-chip" type="button" data-filter="roles" aria-pressed="false">Role Playbooks <strong>3</strong></button>
-        <button class="chip filter-chip" type="button" data-filter="hooks" aria-pressed="false">Hooks <strong>7</strong></button>
-        <button class="chip filter-chip" type="button" data-filter="plugins" aria-pressed="false">Plugins and Prompts <strong>3</strong></button>
-        <button class="chip filter-chip" type="button" data-filter="examples" aria-pressed="false">Examples <strong>1</strong></button>
-        <button class="chip filter-chip" type="button" data-filter="templates" aria-pressed="false">Spec Templates <strong>2</strong></button>
-        <button class="chip filter-chip" type="button" data-filter="references" aria-pressed="false">References <strong>2</strong></button>
-      </div>
-    </div>
-  </header>
+				<!-- Stats chips -->
+				<div class="hero-stats">
+					<button class="chip filter-chip is-active" type="button" data-filter="all" aria-pressed="true">Total resources <strong>39</strong></button>
+					<button class="chip filter-chip" type="button" data-filter="guides" aria-pressed="false">Guides <strong>15</strong></button>
+					<button class="chip filter-chip" type="button" data-filter="agents" aria-pressed="false">Agents <strong>6</strong></button>
+					<button class="chip filter-chip" type="button" data-filter="roles" aria-pressed="false">Role Playbooks <strong>3</strong></button>
+					<button class="chip filter-chip" type="button" data-filter="hooks" aria-pressed="false">Hooks <strong>7</strong></button>
+					<button class="chip filter-chip" type="button" data-filter="plugins" aria-pressed="false">Plugins and Prompts <strong>3</strong></button>
+					<button class="chip filter-chip" type="button" data-filter="examples" aria-pressed="false">Examples <strong>1</strong></button>
+					<button class="chip filter-chip" type="button" data-filter="templates" aria-pressed="false">Spec Templates <strong>2</strong></button>
+					<button class="chip filter-chip" type="button" data-filter="references" aria-pressed="false">References <strong>2</strong></button>
+				</div>
+			</div>
+		</header>
 
-  <!-- Resource sections -->
-  <main class="main" id="main">
-    <section class="category" id="guides">
-      <div class="category-header">
-        <h2>Guides</h2>
-        <span class="category-count">15</span>
-      </div>
-      <p class="category-desc">How-to guides for BA, Dev, and QA roles covering quality baselines, workflows, security, prompting, and more.</p>
-      <div class="card-grid">
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/guides/AI-CODE-QUALITY-TOOLS.md" target="_blank" rel="noopener" data-search="AI Options For Better Code Quality Use this guide to select tooling that improves quality with measurable outcomes. AI-CODE-QUALITY-TOOLS.md guides">
-        <span class="card-title">AI Options For Better Code Quality</span>
-        <span class="card-desc">Use this guide to select tooling that improves quality with measurable outcomes.</span>
-        <span class="card-ext">md</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/guides/AI-INSTRUCTIONS.md" target="_blank" rel="noopener" data-search="AI Instructions And Quality Baseline Use this before generating or modifying production code. AI-INSTRUCTIONS.md guides">
-        <span class="card-title">AI Instructions And Quality Baseline</span>
-        <span class="card-desc">Use this before generating or modifying production code.</span>
-        <span class="card-ext">md</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/guides/AI-WORKFLOWS.md" target="_blank" rel="noopener" data-search="AI Workflows: Claude, Gemini, And GitHub Copilot This guide defines a controlled way to use AI tools without losing quality. AI-WORKFLOWS.md guides">
-        <span class="card-title">AI Workflows: Claude, Gemini, And GitHub Copilot</span>
-        <span class="card-desc">This guide defines a controlled way to use AI tools without losing quality.</span>
-        <span class="card-ext">md</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/guides/CLI-VS-IDE.md" target="_blank" rel="noopener" data-search="CLI vs IDE: When To Use Which Use both. The best teams switch based on task type. CLI-VS-IDE.md guides">
-        <span class="card-title">CLI vs IDE: When To Use Which</span>
-        <span class="card-desc">Use both. The best teams switch based on task type.</span>
-        <span class="card-ext">md</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/guides/CROSS-CRAFT-HANDOFFS.md" target="_blank" rel="noopener" data-search="Cross-Craft Handoffs (BA -&gt; Dev -&gt; QA) Use this map so each craft knows what to receive, what to deliver, and where to go next. CROSS-CRAFT-HANDOFFS.md guides">
-        <span class="card-title">Cross-Craft Handoffs (BA -&gt; Dev -&gt; QA)</span>
-        <span class="card-desc">Use this map so each craft knows what to receive, what to deliver, and where to go next.</span>
-        <span class="card-ext">md</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/guides/DESIGN-MD-GUIDE.md" target="_blank" rel="noopener" data-search="Design MD Guide Design MD is a design system document that AI tools can read to generate more consistent UI decisions across a project. DESIGN-MD-GUIDE.md guides">
-        <span class="card-title">Design MD Guide</span>
-        <span class="card-desc">Design MD is a design system document that AI tools can read to generate more consistent UI decisions across a project.</span>
-        <span class="card-ext">md</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/guides/LEARNING-PATH.md" target="_blank" rel="noopener" data-search="Learning Path: Add AI Properly Use this path if you are learning and want a clear order. LEARNING-PATH.md guides">
-        <span class="card-title">Learning Path: Add AI Properly</span>
-        <span class="card-desc">Use this path if you are learning and want a clear order.</span>
-        <span class="card-ext">md</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/guides/PROMPTING-FOR-ENGINEERS.md" target="_blank" rel="noopener" data-search="Prompting For Engineers Use this guide to get higher-quality AI output without going in circles. PROMPTING-FOR-ENGINEERS.md guides">
-        <span class="card-title">Prompting For Engineers</span>
-        <span class="card-desc">Use this guide to get higher-quality AI output without going in circles.</span>
-        <span class="card-ext">md</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/guides/PROTOTYPING-SAFETY.md" target="_blank" rel="noopener" data-search="Prototyping Safety Guide Use this when prototyping with tools such as Replit, Loveable, and Base44. PROTOTYPING-SAFETY.md guides">
-        <span class="card-title">Prototyping Safety Guide</span>
-        <span class="card-desc">Use this when prototyping with tools such as Replit, Loveable, and Base44.</span>
-        <span class="card-ext">md</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/guides/QUALITY-AUDIT.md" target="_blank" rel="noopener" data-search="Quality Audit: Find Gaps Early Use this audit at project start, before major releases, and after large refactors. QUALITY-AUDIT.md guides">
-        <span class="card-title">Quality Audit: Find Gaps Early</span>
-        <span class="card-desc">Use this audit at project start, before major releases, and after large refactors.</span>
-        <span class="card-ext">md</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/guides/QUALITY-SCORECARD.md" target="_blank" rel="noopener" data-search="Quality Scorecard And Cadence Use this monthly to measure whether AI-assisted delivery is improving outcomes. QUALITY-SCORECARD.md guides">
-        <span class="card-title">Quality Scorecard And Cadence</span>
-        <span class="card-desc">Use this monthly to measure whether AI-assisted delivery is improving outcomes.</span>
-        <span class="card-ext">md</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/guides/SCAFFOLD-AND-ACCELERATE.md" target="_blank" rel="noopener" data-search="Scaffold New Projects And Accelerate Existing Ones 1. Run intake questions from .ai/guides/START-HERE.md 2. Define first release scope and non-scope 3. Create foundational specs from .ai/specs/templates/feature.â€¦ SCAFFOLD-AND-ACCELERATE.md guides">
-        <span class="card-title">Scaffold New Projects And Accelerate Existing Ones</span>
-        <span class="card-desc">1. Run intake questions from .ai/guides/START-HERE.md 2. Define first release scope and non-scope 3. Create foundational specs from .ai/specs/templates/feature.â€¦</span>
-        <span class="card-ext">md</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/guides/SECURITY-OWASP-TOP10.md" target="_blank" rel="noopener" data-search="Security Check: OWASP Top 10 Use this guide as a quick security gate during design, implementation, review, and release. SECURITY-OWASP-TOP10.md guides">
-        <span class="card-title">Security Check: OWASP Top 10</span>
-        <span class="card-desc">Use this guide as a quick security gate during design, implementation, review, and release.</span>
-        <span class="card-ext">md</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/guides/START-HERE.md" target="_blank" rel="noopener" data-search="Start Here: Intake Questions Use this as the first conversation in discovery, refinement, and planning. START-HERE.md guides">
-        <span class="card-title">Start Here: Intake Questions</span>
-        <span class="card-desc">Use this as the first conversation in discovery, refinement, and planning.</span>
-        <span class="card-ext">md</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/guides/TEAM-KICKOFF-CHECKLIST.md" target="_blank" rel="noopener" data-search="Team Kickoff Checklist (Sprint 0) Use this single page to align BA, Dev, and QA before delivery starts. TEAM-KICKOFF-CHECKLIST.md guides">
-        <span class="card-title">Team Kickoff Checklist (Sprint 0)</span>
-        <span class="card-desc">Use this single page to align BA, Dev, and QA before delivery starts.</span>
-        <span class="card-ext">md</span>
-      </a>
-      </div>
-    </section>
-    <section class="category" id="agents">
-      <div class="category-header">
-        <h2>Agents</h2>
-        <span class="category-count">6</span>
-      </div>
-      <p class="category-desc">Specialised AI agent instruction files. Drop these into your IDE or orchestration layer.</p>
-      <div class="card-grid">
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/agents/api-agent.md" target="_blank" rel="noopener" data-search="API Agent Goal: api-agent.md agents">
-        <span class="card-title">API Agent</span>
-        <span class="card-desc">Goal:</span>
-        <span class="card-ext">md</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/agents/ba-agent.md" target="_blank" rel="noopener" data-search="BA Agent Goal: ba-agent.md agents">
-        <span class="card-title">BA Agent</span>
-        <span class="card-desc">Goal:</span>
-        <span class="card-ext">md</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/agents/dev-agent.md" target="_blank" rel="noopener" data-search="Dev Agent Goal: dev-agent.md agents">
-        <span class="card-title">Dev Agent</span>
-        <span class="card-desc">Goal:</span>
-        <span class="card-ext">md</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/agents/qa-agent.md" target="_blank" rel="noopener" data-search="QA Agent Goal: qa-agent.md agents">
-        <span class="card-title">QA Agent</span>
-        <span class="card-desc">Goal:</span>
-        <span class="card-ext">md</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/agents/scaffold-agent.md" target="_blank" rel="noopener" data-search="Scaffold Agent Goal: scaffold-agent.md agents">
-        <span class="card-title">Scaffold Agent</span>
-        <span class="card-desc">Goal:</span>
-        <span class="card-ext">md</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/agents/test-agent.md" target="_blank" rel="noopener" data-search="Test Agent Goal: test-agent.md agents">
-        <span class="card-title">Test Agent</span>
-        <span class="card-desc">Goal:</span>
-        <span class="card-ext">md</span>
-      </a>
-      </div>
-    </section>
-    <section class="category" id="roles">
-      <div class="category-header">
-        <h2>Role Playbooks</h2>
-        <span class="category-count">3</span>
-      </div>
-      <p class="category-desc">Mission, checklist, and handoff contract for BA, Dev, and QA roles in an AI-assisted delivery team.</p>
-      <div class="card-grid">
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/roles/BA.md" target="_blank" rel="noopener" data-search="BA Role Playbook Mission: BA.md roles">
-        <span class="card-title">BA Role Playbook</span>
-        <span class="card-desc">Mission:</span>
-        <span class="card-ext">md</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/roles/DEV.md" target="_blank" rel="noopener" data-search="Dev Role Playbook Mission: DEV.md roles">
-        <span class="card-title">Dev Role Playbook</span>
-        <span class="card-desc">Mission:</span>
-        <span class="card-ext">md</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/roles/QA.md" target="_blank" rel="noopener" data-search="QA Role Playbook Mission: QA.md roles">
-        <span class="card-title">QA Role Playbook</span>
-        <span class="card-desc">Mission:</span>
-        <span class="card-ext">md</span>
-      </a>
-      </div>
-    </section>
-    <section class="category" id="hooks">
-      <div class="category-header">
-        <h2>Hooks</h2>
-        <span class="category-count">7</span>
-      </div>
-      <p class="category-desc">Pre-commit, CI validation, and lint automation scripts for quality gates.</p>
-      <div class="card-grid">
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/hooks/ci-validate.ps1" target="_blank" rel="noopener" data-search="ci validate $ErrorActionPreference = &quot;Stop&quot; ci-validate.ps1 hooks">
-        <span class="card-title">ci validate</span>
-        <span class="card-desc">$ErrorActionPreference = &quot;Stop&quot;</span>
-        <span class="card-ext">ps1</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/hooks/lint-generated.ps1" target="_blank" rel="noopener" data-search="lint generated $ErrorActionPreference = &quot;Stop&quot; lint-generated.ps1 hooks">
-        <span class="card-title">lint generated</span>
-        <span class="card-desc">$ErrorActionPreference = &quot;Stop&quot;</span>
-        <span class="card-ext">ps1</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/hooks/lint-generated.sh" target="_blank" rel="noopener" data-search="lint generated #!/usr/bin/env bash set -euo pipefail lint-generated.sh hooks">
-        <span class="card-title">lint generated</span>
-        <span class="card-desc">#!/usr/bin/env bash set -euo pipefail</span>
-        <span class="card-ext">sh</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/hooks/pre-commit.ps1" target="_blank" rel="noopener" data-search="pre commit $ErrorActionPreference = &quot;Stop&quot; pre-commit.ps1 hooks">
-        <span class="card-title">pre commit</span>
-        <span class="card-desc">$ErrorActionPreference = &quot;Stop&quot;</span>
-        <span class="card-ext">ps1</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/hooks/pre-commit.sh" target="_blank" rel="noopener" data-search="pre commit #!/usr/bin/env bash set -euo pipefail pre-commit.sh hooks">
-        <span class="card-title">pre commit</span>
-        <span class="card-desc">#!/usr/bin/env bash set -euo pipefail</span>
-        <span class="card-ext">sh</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/hooks/validate-specs.ps1" target="_blank" rel="noopener" data-search="validate specs $ErrorActionPreference = &quot;Stop&quot; validate-specs.ps1 hooks">
-        <span class="card-title">validate specs</span>
-        <span class="card-desc">$ErrorActionPreference = &quot;Stop&quot;</span>
-        <span class="card-ext">ps1</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/hooks/validate-specs.sh" target="_blank" rel="noopener" data-search="validate specs #!/usr/bin/env bash set -euo pipefail validate-specs.sh hooks">
-        <span class="card-title">validate specs</span>
-        <span class="card-desc">#!/usr/bin/env bash set -euo pipefail</span>
-        <span class="card-ext">sh</span>
-      </a>
-      </div>
-    </section>
-    <section class="category" id="plugins">
-      <div class="category-header">
-        <h2>Plugins and Prompts</h2>
-        <span class="category-count">3</span>
-      </div>
-      <p class="category-desc">Copilot prompt files and BEADS templates for repeatable AI interactions.</p>
-      <div class="card-grid">
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/plugins/copilot-prompts/generate-feature.md" target="_blank" rel="noopener" data-search="Prompt: Generate Feature Module You are generating production-grade code from a deterministic spec. generate-feature.md plugins">
-        <span class="card-title">Prompt: Generate Feature Module</span>
-        <span class="card-desc">You are generating production-grade code from a deterministic spec.</span>
-        <span class="card-ext">md</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/plugins/copilot-prompts/qa-test-plan.md" target="_blank" rel="noopener" data-search="Prompt: Build QA Test Plan Input: qa-test-plan.md plugins">
-        <span class="card-title">Prompt: Build QA Test Plan</span>
-        <span class="card-desc">Input:</span>
-        <span class="card-ext">md</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/plugins/copilot-prompts/review-feature.md" target="_blank" rel="noopener" data-search="Prompt: Review Feature Against Spec Inputs: review-feature.md plugins">
-        <span class="card-title">Prompt: Review Feature Against Spec</span>
-        <span class="card-desc">Inputs:</span>
-        <span class="card-ext">md</span>
-      </a>
-      </div>
-    </section>
-    <section class="category" id="examples">
-      <div class="category-header">
-        <h2>Examples</h2>
-        <span class="category-count">1</span>
-      </div>
-      <p class="category-desc">End-to-end worked examples showing how a feature moves from spec to delivery.</p>
-      <div class="card-grid">
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/examples/golden-path-feature-delivery.md" target="_blank" rel="noopener" data-search="Golden Path: End-To-End Feature Delivery Use this as a reference run for spec-driven delivery. golden-path-feature-delivery.md examples">
-        <span class="card-title">Golden Path: End-To-End Feature Delivery</span>
-        <span class="card-desc">Use this as a reference run for spec-driven delivery.</span>
-        <span class="card-ext">md</span>
-      </a>
-      </div>
-    </section>
-    <section class="category" id="templates">
-      <div class="category-header">
-        <h2>Spec Templates</h2>
-        <span class="category-count">2</span>
-      </div>
-      <p class="category-desc">Starter templates for feature specs and design system files.</p>
-      <div class="card-grid">
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/specs/templates/DESIGN.md" target="_blank" rel="noopener" data-search="DESIGN.md Rules: DESIGN.md templates">
-        <span class="card-title">DESIGN.md</span>
-        <span class="card-desc">Rules:</span>
-        <span class="card-ext">md</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/specs/templates/feature.spec.md" target="_blank" rel="noopener" data-search="Feature: &lt;feature-name&gt; &lt;business context and intent&gt; feature.spec.md templates">
-        <span class="card-title">Feature: &lt;feature-name&gt;</span>
-        <span class="card-desc">&lt;business context and intent&gt;</span>
-        <span class="card-ext">md</span>
-      </a>
-      </div>
-    </section>
-    <section class="category" id="references">
-      <div class="category-header">
-        <h2>References</h2>
-        <span class="category-count">2</span>
-      </div>
-      <p class="category-desc">Design tokens, SDD articles, and external tooling references.</p>
-      <div class="card-grid">
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/references/entelect.co.za-design.md" target="_blank" rel="noopener" data-search="Entelect Dark Orbit Entelect presents as a polished, enterprise technology brand with a dark cinematic atmosphere and a strong sense of motion. The tone is professional and confideâ€¦ entelect.co.za-design.md references">
-        <span class="card-title">Entelect Dark Orbit</span>
-        <span class="card-desc">Entelect presents as a polished, enterprise technology brand with a dark cinematic atmosphere and a strong sense of motion. The tone is professional and confideâ€¦</span>
-        <span class="card-ext">md</span>
-      </a>
-      <a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/references/sdd-references.md" target="_blank" rel="noopener" data-search="Spec-Driven Development References Use these as primary external references for this repository. sdd-references.md references">
-        <span class="card-title">Spec-Driven Development References</span>
-        <span class="card-desc">Use these as primary external references for this repository.</span>
-        <span class="card-ext">md</span>
-      </a>
-      </div>
-    </section>
-    <p class="search-empty" role="status">No resources match your search.</p>
-  </main>
+		<!-- Resource sections -->
+		<main class="main" id="main">
+			<section class="category" id="guides">
+				<div class="category-header">
+					<h2>Guides</h2>
+					<span class="category-count">15</span>
+				</div>
+				<p class="category-desc">How-to guides for BA, Dev, and QA roles covering quality baselines, workflows, security, prompting, and more.</p>
+				<div class="card-grid">
+					<a
+						class="card"
+						href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/guides/AI-CODE-QUALITY-TOOLS.md"
+						target="_blank"
+						rel="noopener"
+						data-search="AI Options For Better Code Quality Use this guide to select tooling that improves quality with measurable outcomes. AI-CODE-QUALITY-TOOLS.md guides"
+					>
+						<span class="card-title">AI Options For Better Code Quality</span>
+						<span class="card-desc">Use this guide to select tooling that improves quality with measurable outcomes.</span>
+						<span class="card-ext">md</span>
+					</a>
+					<a
+						class="card"
+						href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/guides/AI-INSTRUCTIONS.md"
+						target="_blank"
+						rel="noopener"
+						data-search="AI Instructions And Quality Baseline Use this before generating or modifying production code. AI-INSTRUCTIONS.md guides"
+					>
+						<span class="card-title">AI Instructions And Quality Baseline</span>
+						<span class="card-desc">Use this before generating or modifying production code.</span>
+						<span class="card-ext">md</span>
+					</a>
+					<a
+						class="card"
+						href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/guides/AI-WORKFLOWS.md"
+						target="_blank"
+						rel="noopener"
+						data-search="AI Workflows: Claude, Gemini, And GitHub Copilot This guide defines a controlled way to use AI tools without losing quality. AI-WORKFLOWS.md guides"
+					>
+						<span class="card-title">AI Workflows: Claude, Gemini, And GitHub Copilot</span>
+						<span class="card-desc">This guide defines a controlled way to use AI tools without losing quality.</span>
+						<span class="card-ext">md</span>
+					</a>
+					<a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/guides/CLI-VS-IDE.md" target="_blank" rel="noopener" data-search="CLI vs IDE: When To Use Which Use both. The best teams switch based on task type. CLI-VS-IDE.md guides">
+						<span class="card-title">CLI vs IDE: When To Use Which</span>
+						<span class="card-desc">Use both. The best teams switch based on task type.</span>
+						<span class="card-ext">md</span>
+					</a>
+					<a
+						class="card"
+						href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/guides/CROSS-CRAFT-HANDOFFS.md"
+						target="_blank"
+						rel="noopener"
+						data-search="Cross-Craft Handoffs (BA -&gt; Dev -&gt; QA) Use this map so each craft knows what to receive, what to deliver, and where to go next. CROSS-CRAFT-HANDOFFS.md guides"
+					>
+						<span class="card-title">Cross-Craft Handoffs (BA -&gt; Dev -&gt; QA)</span>
+						<span class="card-desc">Use this map so each craft knows what to receive, what to deliver, and where to go next.</span>
+						<span class="card-ext">md</span>
+					</a>
+					<a
+						class="card"
+						href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/guides/DESIGN-MD-GUIDE.md"
+						target="_blank"
+						rel="noopener"
+						data-search="Design MD Guide Design MD is a design system document that AI tools can read to generate more consistent UI decisions across a project. DESIGN-MD-GUIDE.md guides"
+					>
+						<span class="card-title">Design MD Guide</span>
+						<span class="card-desc">Design MD is a design system document that AI tools can read to generate more consistent UI decisions across a project.</span>
+						<span class="card-ext">md</span>
+					</a>
+					<a
+						class="card"
+						href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/guides/LEARNING-PATH.md"
+						target="_blank"
+						rel="noopener"
+						data-search="Learning Path: Add AI Properly Use this path if you are learning and want a clear order. LEARNING-PATH.md guides"
+					>
+						<span class="card-title">Learning Path: Add AI Properly</span>
+						<span class="card-desc">Use this path if you are learning and want a clear order.</span>
+						<span class="card-ext">md</span>
+					</a>
+					<a
+						class="card"
+						href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/guides/PROMPTING-FOR-ENGINEERS.md"
+						target="_blank"
+						rel="noopener"
+						data-search="Prompting For Engineers Use this guide to get higher-quality AI output without going in circles. PROMPTING-FOR-ENGINEERS.md guides"
+					>
+						<span class="card-title">Prompting For Engineers</span>
+						<span class="card-desc">Use this guide to get higher-quality AI output without going in circles.</span>
+						<span class="card-ext">md</span>
+					</a>
+					<a
+						class="card"
+						href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/guides/PROTOTYPING-SAFETY.md"
+						target="_blank"
+						rel="noopener"
+						data-search="Prototyping Safety Guide Use this when prototyping with tools such as Replit, Loveable, and Base44. PROTOTYPING-SAFETY.md guides"
+					>
+						<span class="card-title">Prototyping Safety Guide</span>
+						<span class="card-desc">Use this when prototyping with tools such as Replit, Loveable, and Base44.</span>
+						<span class="card-ext">md</span>
+					</a>
+					<a
+						class="card"
+						href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/guides/QUALITY-AUDIT.md"
+						target="_blank"
+						rel="noopener"
+						data-search="Quality Audit: Find Gaps Early Use this audit at project start, before major releases, and after large refactors. QUALITY-AUDIT.md guides"
+					>
+						<span class="card-title">Quality Audit: Find Gaps Early</span>
+						<span class="card-desc">Use this audit at project start, before major releases, and after large refactors.</span>
+						<span class="card-ext">md</span>
+					</a>
+					<a
+						class="card"
+						href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/guides/QUALITY-SCORECARD.md"
+						target="_blank"
+						rel="noopener"
+						data-search="Quality Scorecard And Cadence Use this monthly to measure whether AI-assisted delivery is improving outcomes. QUALITY-SCORECARD.md guides"
+					>
+						<span class="card-title">Quality Scorecard And Cadence</span>
+						<span class="card-desc">Use this monthly to measure whether AI-assisted delivery is improving outcomes.</span>
+						<span class="card-ext">md</span>
+					</a>
+					<a
+						class="card"
+						href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/guides/SCAFFOLD-AND-ACCELERATE.md"
+						target="_blank"
+						rel="noopener"
+						data-search="Scaffold New Projects And Accelerate Existing Ones 1. Run intake questions from .ai/guides/START-HERE.md 2. Define first release scope and non-scope 3. Create foundational specs from .ai/specs/templates/feature. SCAFFOLD-AND-ACCELERATE.md guides"
+					>
+						<span class="card-title">Scaffold New Projects And Accelerate Existing Ones</span>
+						<span class="card-desc">1. Run intake questions from .ai/guides/START-HERE.md 2. Define first release scope and non-scope 3. Create foundational specs from .ai/specs/templates/feature.</span>
+						<span class="card-ext">md</span>
+					</a>
+					<a
+						class="card"
+						href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/guides/SECURITY-OWASP-TOP10.md"
+						target="_blank"
+						rel="noopener"
+						data-search="Security Check: OWASP Top 10 Use this guide as a quick security gate during design, implementation, review, and release. SECURITY-OWASP-TOP10.md guides"
+					>
+						<span class="card-title">Security Check: OWASP Top 10</span>
+						<span class="card-desc">Use this guide as a quick security gate during design, implementation, review, and release.</span>
+						<span class="card-ext">md</span>
+					</a>
+					<a
+						class="card"
+						href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/guides/START-HERE.md"
+						target="_blank"
+						rel="noopener"
+						data-search="Start Here: Intake Questions Use this as the first conversation in discovery, refinement, and planning. START-HERE.md guides"
+					>
+						<span class="card-title">Start Here: Intake Questions</span>
+						<span class="card-desc">Use this as the first conversation in discovery, refinement, and planning.</span>
+						<span class="card-ext">md</span>
+					</a>
+					<a
+						class="card"
+						href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/guides/TEAM-KICKOFF-CHECKLIST.md"
+						target="_blank"
+						rel="noopener"
+						data-search="Team Kickoff Checklist (Sprint 0) Use this single page to align BA, Dev, and QA before delivery starts. TEAM-KICKOFF-CHECKLIST.md guides"
+					>
+						<span class="card-title">Team Kickoff Checklist (Sprint 0)</span>
+						<span class="card-desc">Use this single page to align BA, Dev, and QA before delivery starts.</span>
+						<span class="card-ext">md</span>
+					</a>
+				</div>
+			</section>
+			<section class="category" id="agents">
+				<div class="category-header">
+					<h2>Agents</h2>
+					<span class="category-count">6</span>
+				</div>
+				<p class="category-desc">Specialised AI agent instruction files. Drop these into your IDE or orchestration layer.</p>
+				<div class="card-grid">
+					<a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/agents/api-agent.md" target="_blank" rel="noopener" data-search="API Agent Goal: api-agent.md agents">
+						<span class="card-title">API Agent</span>
+						<span class="card-desc">Goal:</span>
+						<span class="card-ext">md</span>
+					</a>
+					<a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/agents/ba-agent.md" target="_blank" rel="noopener" data-search="BA Agent Goal: ba-agent.md agents">
+						<span class="card-title">BA Agent</span>
+						<span class="card-desc">Goal:</span>
+						<span class="card-ext">md</span>
+					</a>
+					<a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/agents/dev-agent.md" target="_blank" rel="noopener" data-search="Dev Agent Goal: dev-agent.md agents">
+						<span class="card-title">Dev Agent</span>
+						<span class="card-desc">Goal:</span>
+						<span class="card-ext">md</span>
+					</a>
+					<a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/agents/qa-agent.md" target="_blank" rel="noopener" data-search="QA Agent Goal: qa-agent.md agents">
+						<span class="card-title">QA Agent</span>
+						<span class="card-desc">Goal:</span>
+						<span class="card-ext">md</span>
+					</a>
+					<a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/agents/scaffold-agent.md" target="_blank" rel="noopener" data-search="Scaffold Agent Goal: scaffold-agent.md agents">
+						<span class="card-title">Scaffold Agent</span>
+						<span class="card-desc">Goal:</span>
+						<span class="card-ext">md</span>
+					</a>
+					<a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/agents/test-agent.md" target="_blank" rel="noopener" data-search="Test Agent Goal: test-agent.md agents">
+						<span class="card-title">Test Agent</span>
+						<span class="card-desc">Goal:</span>
+						<span class="card-ext">md</span>
+					</a>
+				</div>
+			</section>
+			<section class="category" id="roles">
+				<div class="category-header">
+					<h2>Role Playbooks</h2>
+					<span class="category-count">3</span>
+				</div>
+				<p class="category-desc">Mission, checklist, and handoff contract for BA, Dev, and QA roles in an AI-assisted delivery team.</p>
+				<div class="card-grid">
+					<a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/roles/BA.md" target="_blank" rel="noopener" data-search="BA Role Playbook Mission: BA.md roles">
+						<span class="card-title">BA Role Playbook</span>
+						<span class="card-desc">Mission:</span>
+						<span class="card-ext">md</span>
+					</a>
+					<a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/roles/DEV.md" target="_blank" rel="noopener" data-search="Dev Role Playbook Mission: DEV.md roles">
+						<span class="card-title">Dev Role Playbook</span>
+						<span class="card-desc">Mission:</span>
+						<span class="card-ext">md</span>
+					</a>
+					<a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/roles/QA.md" target="_blank" rel="noopener" data-search="QA Role Playbook Mission: QA.md roles">
+						<span class="card-title">QA Role Playbook</span>
+						<span class="card-desc">Mission:</span>
+						<span class="card-ext">md</span>
+					</a>
+				</div>
+			</section>
+			<section class="category" id="hooks">
+				<div class="category-header">
+					<h2>Hooks</h2>
+					<span class="category-count">7</span>
+				</div>
+				<p class="category-desc">Pre-commit, CI validation, and lint automation scripts for quality gates.</p>
+				<div class="card-grid">
+					<a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/hooks/ci-validate.ps1" target="_blank" rel="noopener" data-search='ci validate $ErrorActionPreference = "Stop" ci-validate.ps1 hooks'>
+						<span class="card-title">ci validate</span>
+						<span class="card-desc">$ErrorActionPreference = &quot;Stop&quot;</span>
+						<span class="card-ext">ps1</span>
+					</a>
+					<a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/hooks/lint-generated.ps1" target="_blank" rel="noopener" data-search='lint generated $ErrorActionPreference = "Stop" lint-generated.ps1 hooks'>
+						<span class="card-title">lint generated</span>
+						<span class="card-desc">$ErrorActionPreference = &quot;Stop&quot;</span>
+						<span class="card-ext">ps1</span>
+					</a>
+					<a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/hooks/lint-generated.sh" target="_blank" rel="noopener" data-search="lint generated #!/usr/bin/env bash set -euo pipefail lint-generated.sh hooks">
+						<span class="card-title">lint generated</span>
+						<span class="card-desc">#!/usr/bin/env bash set -euo pipefail</span>
+						<span class="card-ext">sh</span>
+					</a>
+					<a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/hooks/pre-commit.ps1" target="_blank" rel="noopener" data-search='pre commit $ErrorActionPreference = "Stop" pre-commit.ps1 hooks'>
+						<span class="card-title">pre commit</span>
+						<span class="card-desc">$ErrorActionPreference = &quot;Stop&quot;</span>
+						<span class="card-ext">ps1</span>
+					</a>
+					<a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/hooks/pre-commit.sh" target="_blank" rel="noopener" data-search="pre commit #!/usr/bin/env bash set -euo pipefail pre-commit.sh hooks">
+						<span class="card-title">pre commit</span>
+						<span class="card-desc">#!/usr/bin/env bash set -euo pipefail</span>
+						<span class="card-ext">sh</span>
+					</a>
+					<a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/hooks/validate-specs.ps1" target="_blank" rel="noopener" data-search='validate specs $ErrorActionPreference = "Stop" validate-specs.ps1 hooks'>
+						<span class="card-title">validate specs</span>
+						<span class="card-desc">$ErrorActionPreference = &quot;Stop&quot;</span>
+						<span class="card-ext">ps1</span>
+					</a>
+					<a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/hooks/validate-specs.sh" target="_blank" rel="noopener" data-search="validate specs #!/usr/bin/env bash set -euo pipefail validate-specs.sh hooks">
+						<span class="card-title">validate specs</span>
+						<span class="card-desc">#!/usr/bin/env bash set -euo pipefail</span>
+						<span class="card-ext">sh</span>
+					</a>
+				</div>
+			</section>
+			<section class="category" id="plugins">
+				<div class="category-header">
+					<h2>Plugins and Prompts</h2>
+					<span class="category-count">3</span>
+				</div>
+				<p class="category-desc">Copilot prompt files and BEADS templates for repeatable AI interactions.</p>
+				<div class="card-grid">
+					<a
+						class="card"
+						href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/plugins/copilot-prompts/generate-feature.md"
+						target="_blank"
+						rel="noopener"
+						data-search="Prompt: Generate Feature Module You are generating production-grade code from a deterministic spec. generate-feature.md plugins"
+					>
+						<span class="card-title">Prompt: Generate Feature Module</span>
+						<span class="card-desc">You are generating production-grade code from a deterministic spec.</span>
+						<span class="card-ext">md</span>
+					</a>
+					<a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/plugins/copilot-prompts/qa-test-plan.md" target="_blank" rel="noopener" data-search="Prompt: Build QA Test Plan Input: qa-test-plan.md plugins">
+						<span class="card-title">Prompt: Build QA Test Plan</span>
+						<span class="card-desc">Input:</span>
+						<span class="card-ext">md</span>
+					</a>
+					<a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/plugins/copilot-prompts/review-feature.md" target="_blank" rel="noopener" data-search="Prompt: Review Feature Against Spec Inputs: review-feature.md plugins">
+						<span class="card-title">Prompt: Review Feature Against Spec</span>
+						<span class="card-desc">Inputs:</span>
+						<span class="card-ext">md</span>
+					</a>
+				</div>
+			</section>
+			<section class="category" id="examples">
+				<div class="category-header">
+					<h2>Examples</h2>
+					<span class="category-count">1</span>
+				</div>
+				<p class="category-desc">End-to-end worked examples showing how a feature moves from spec to delivery.</p>
+				<div class="card-grid">
+					<a
+						class="card"
+						href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/examples/golden-path-feature-delivery.md"
+						target="_blank"
+						rel="noopener"
+						data-search="Golden Path: End-To-End Feature Delivery Use this as a reference run for spec-driven delivery. golden-path-feature-delivery.md examples"
+					>
+						<span class="card-title">Golden Path: End-To-End Feature Delivery</span>
+						<span class="card-desc">Use this as a reference run for spec-driven delivery.</span>
+						<span class="card-ext">md</span>
+					</a>
+				</div>
+			</section>
+			<section class="category" id="templates">
+				<div class="category-header">
+					<h2>Spec Templates</h2>
+					<span class="category-count">2</span>
+				</div>
+				<p class="category-desc">Starter templates for feature specs and design system files.</p>
+				<div class="card-grid">
+					<a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/specs/templates/DESIGN.md" target="_blank" rel="noopener" data-search="DESIGN.md Rules: DESIGN.md templates">
+						<span class="card-title">DESIGN.md</span>
+						<span class="card-desc">Rules:</span>
+						<span class="card-ext">md</span>
+					</a>
+					<a class="card" href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/specs/templates/feature.spec.md" target="_blank" rel="noopener" data-search="Feature: &lt;feature-name&gt; &lt;business context and intent&gt; feature.spec.md templates">
+						<span class="card-title">Feature: &lt;feature-name&gt;</span>
+						<span class="card-desc">&lt;business context and intent&gt;</span>
+						<span class="card-ext">md</span>
+					</a>
+				</div>
+			</section>
+			<section class="category" id="references">
+				<div class="category-header">
+					<h2>References</h2>
+					<span class="category-count">2</span>
+				</div>
+				<p class="category-desc">Design tokens, SDD articles, and external tooling references.</p>
+				<div class="card-grid">
+					<a
+						class="card"
+						href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/references/entelect.co.za-design.md"
+						target="_blank"
+						rel="noopener"
+						data-search="Entelect Dark Orbit Entelect presents as a polished, enterprise technology brand with a dark cinematic atmosphere and a strong sense of motion. The tone is professional and confide entelect.co.za-design.md references"
+					>
+						<span class="card-title">Entelect Dark Orbit</span>
+						<span class="card-desc">Entelect presents as a polished, enterprise technology brand with a dark cinematic atmosphere and a strong sense of motion. The tone is professional and confide</span>
+						<span class="card-ext">md</span>
+					</a>
+					<a
+						class="card"
+						href="https://github.com/entelect-incubator/AI-Toolbox/blob/main/.ai/references/sdd-references.md"
+						target="_blank"
+						rel="noopener"
+						data-search="Spec-Driven Development References Use these as primary external references for this repository. sdd-references.md references"
+					>
+						<span class="card-title">Spec-Driven Development References</span>
+						<span class="card-desc">Use these as primary external references for this repository.</span>
+						<span class="card-ext">md</span>
+					</a>
+				</div>
+			</section>
+			<p class="search-empty" role="status">No resources match your search.</p>
+		</main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>Built with the <a href="https://github.com/entelect-incubator/AI-Toolbox" target="_blank" rel="noopener">Entelect AI Toolbox</a>
-       &nbsp;Â·&nbsp; Last generated: 2026-05-03
-       &nbsp;Â·&nbsp; Styled with <a href=".ai/references/entelect.co.za-design.md" target="_blank">Entelect Dark Orbit</a>
-    </p>
-  </footer>
+		<!-- Footer -->
+		<footer class="footer">
+			<p>
+				Built with the <a href="https://github.com/entelect-incubator/AI-Toolbox" target="_blank" rel="noopener">Entelect AI Toolbox</a> &nbsp;Â·&nbsp; Last generated: 2026-05-03 &nbsp;Â·&nbsp; Styled with
+				<a href=".ai/references/entelect.co.za-design.md" target="_blank">Entelect Dark Orbit</a>
+			</p>
+		</footer>
 
-  <script src="assets/main.js"></script>
-</body>
+		<script src="assets/main.js"></script>
+	</body>
 </html>
