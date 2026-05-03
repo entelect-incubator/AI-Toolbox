@@ -1,0 +1,21 @@
+# Replace @entelect/* handles with real teams/users in your GitHub org.
+
+# Global default owners
+* @entelect/engineering-leads
+
+# Specs and BA artifacts
+/.ai/specs/ @entelect/ba-team @entelect/architecture-team
+
+# Dev agents, templates, and implementation guidance
+/.ai/agents/ @entelect/dev-team @entelect/architecture-team
+/.ai/plugins/ @entelect/dev-team
+
+# QA and test guidance
+/.ai/roles/QA.md @entelect/qa-team
+/.ai/guides/QUALITY-AUDIT.md @entelect/qa-team @entelect/engineering-leads
+/.ai/guides/SECURITY-OWASP-TOP10.md @entelect/security-team @entelect/qa-team
+
+# Repository governance
+/.github/ @entelect/engineering-leads @entelect/security-team
+/SECURITY.md @entelect/security-team
+/CONTRIBUTING.md @entelect/engineering-leads
